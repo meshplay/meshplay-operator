@@ -25,7 +25,7 @@ A self-service engineering platform, <a href="https://meshplay.io">Meshplay</a>,
 </p>
 <br />
 
-<a href="https://meshplay.io/community"><img alt="Layer5 Service Mesh Community" src="./img/readme/meshplay-operator-dark.svg" style="margin:10px;" width="165px" align="left" /></a>
+<a href="https://meshplay.io/community"><img alt="Khulnasoft Service Mesh Community" src="./img/readme/meshplay-operator-dark.svg" style="margin:10px;" width="165px" align="left" /></a>
 # Meshplay Operator
 Meshplay Operator is the multi-service mesh operator and implementation of MeshSync.
 <div>&nbsp;</div>
@@ -62,15 +62,15 @@ Our projects are community-built and welcome collaboration. 👍 Be sure to see 
 <a href ="https://khulnasoft.com/community"><img alt="MeshMates" src=".github/assets/images/readme/khulnasoft-community-sign.png" style="margin-right:36px; margin-bottom:7px;" width="140px" align="left" /></a>
 <h3>Find your MeshMate</h3>
 
-<p>MeshMates are experienced Layer5 community members, who will help you learn your way around, discover live projects, and expand your community network. Conneect with a Meshmate today!</p>
+<p>MeshMates are experienced Khulnasoft community members, who will help you learn your way around, discover live projects, and expand your community network. Conneect with a Meshmate today!</p>
 
-Find out more on the <a href="https://khulnasoft.com/community#meshmate">Layer5 community</a>. <br />
+Find out more on the <a href="https://khulnasoft.com/community#meshmate">Khulnasoft community</a>. <br />
 
 </p>
 <br /><br />
 <div style="display: flex; justify-content: center; align-items:center;">
 <div>
-<a href="https://meshplay.io/community"><img alt="Layer5 Cloud Native Community" src="https://docs.meshplay.io/assets/img/readme/community.png" width="140px" style="margin-right:36px; margin-bottom:7px;" width="140px" align="left"/></a>
+<a href="https://meshplay.io/community"><img alt="Khulnasoft Cloud Native Community" src="https://docs.meshplay.io/assets/img/readme/community.png" width="140px" style="margin-right:36px; margin-bottom:7px;" width="140px" align="left"/></a>
 </div>
 <div style="width:60%; padding-left: 16px; padding-right: 16px">
 <p>
