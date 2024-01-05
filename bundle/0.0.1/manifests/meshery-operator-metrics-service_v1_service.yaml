@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: meshplay
+    component: operator
+  name: meshplay-operator-metrics-service
+spec:
+  ports:
+  - name: https
+    port: 8443
+    targetPort: https
+  selector:
+    app: meshplay
+    component: operator
+status:
+  loadBalancer: {}

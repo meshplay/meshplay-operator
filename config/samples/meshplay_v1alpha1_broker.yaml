@@ -1,0 +1,13 @@
+apiVersion: meshplay.khulnasoft.com/v1alpha1
+kind: Broker
+metadata:
+  name: meshplay-broker
+  namespace: meshplay
+  labels:
+    app: meshplay
+    component: controller
+    version: v0.1.15
+  annotations:
+    meshplay/component-type: management-plane
+spec:
+  size: 1

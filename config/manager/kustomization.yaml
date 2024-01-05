@@ -1,0 +1,9 @@
+resources:
+- manager.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: meshplay
+images:
+- name: meshplay-operator
+  newName: meshplay-operator
+  newTag: stable-latest

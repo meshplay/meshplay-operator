@@ -1,0 +1,6 @@
+namePrefix: meshplay-
+resources:
+- certificate.yaml
+
+configurations:
+- kustomizeconfig.yaml

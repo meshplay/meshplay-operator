@@ -1,0 +1,20 @@
+# permissions for end users to view meshsyncs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: meshsync-viewer-role
+rules:
+- apiGroups:
+  - meshplay.khulnasoft.com
+  resources:
+  - meshsyncs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - meshplay.khulnasoft.com
+  resources:
+  - meshsyncs/status
+  verbs:
+  - get

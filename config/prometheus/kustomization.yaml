@@ -1,0 +1,3 @@
+namePrefix: meshplay-
+resources:
+- monitor.yaml

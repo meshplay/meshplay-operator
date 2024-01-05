@@ -1,0 +1,24 @@
+# permissions for end users to edit meshsyncs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: meshsync-editor-role
+rules:
+- apiGroups:
+  - meshplay.khulnasoft.com
+  resources:
+  - meshsyncs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - meshplay.khulnasoft.com
+  resources:
+  - meshsyncs/status
+  verbs:
+  - get
