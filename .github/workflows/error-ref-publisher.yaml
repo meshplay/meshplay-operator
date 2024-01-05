@@ -42,7 +42,7 @@ jobs:
       - name: Checkout meshplay
         uses: actions/checkout@master
         with:
-          repository: 'meshplay/meshplay'
+          repository: 'khulnasoft/meshplay'
           # token with write access to meshplay repository
           token: ${{ secrets.GH_ACCESS_TOKEN }}
           path: 'meshplay'
