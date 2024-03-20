@@ -13,7 +13,7 @@ replace (
 
 require (
 	github.com/go-logr/logr v1.4.1
-	github.com/onsi/ginkgo/v2 v2.15.0
+	github.com/onsi/ginkgo/v2 v2.17.0
 	github.com/onsi/gomega v1.32.0
 	k8s.io/api v0.26.1
 	k8s.io/apiextensions-apiserver v0.26.1
@@ -69,7 +69,7 @@ require (
 	golang.org/x/term v0.16.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
-	golang.org/x/tools v0.16.1 // indirect
+	golang.org/x/tools v0.17.0 // indirect
 	gomodules.xyz/jsonpatch/v2 v2.2.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/protobuf v1.33.0 // indirect
