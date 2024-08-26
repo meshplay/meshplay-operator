@@ -1,17 +1,17 @@
 <p style="text-align:center;" align="center"><a href="https://khulnasoft.com/meshplay">
 <picture align="center">
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/khulnasoft/meshplay/master/.github/assets/images/readme/meshplay-logo-light-text-side.svg"  width="70%" align="center" style="margin-bottom:20px;">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/khulnasoft/meshplay/master/.github/assets/images/readme/meshplay-logo-dark-text-side.svg" width="70%" align="center" style="margin-bottom:20px;">
-  <img alt="Shows an illustrated light mode meshplay logo in light color mode and a dark mode meshplay logo dark color mode." src="https://raw.githubusercontent.com/khulnasoft/meshplay/master/.github/assets/images/readme/meshplay-logo-dark-text-side.svg" width="70%" align="center" style="margin-bottom:20px;">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/meshplay/meshplay/master/.github/assets/images/readme/meshplay-logo-light-text-side.svg"  width="70%" align="center" style="margin-bottom:20px;">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/meshplay/meshplay/master/.github/assets/images/readme/meshplay-logo-dark-text-side.svg" width="70%" align="center" style="margin-bottom:20px;">
+  <img alt="Shows an illustrated light mode meshplay logo in light color mode and a dark mode meshplay logo dark color mode." src="https://raw.githubusercontent.com/meshplay/meshplay/master/.github/assets/images/readme/meshplay-logo-dark-text-side.svg" width="70%" align="center" style="margin-bottom:20px;">
 </picture></a><br /><br /></p>
 
 <div align="center">
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/khulnasoft/meshplay-operator.svg)](https://hub.docker.com/r/khulnasoft/meshplay-operator)
 [![Go Report Card](https://goreportcard.com/badge/github.com/khulnasoft/meshplay-operator)](https://goreportcard.com/report/github.com/khulnasoft/meshplay-operator)
-[![Build Status](https://github.com/khulnasoft/meshplay-operator/actions/workflows/build-and-release.yml/badge.svg)](https://github.com/khulnasoft/meshplay-operator/actions)
+[![Build Status](https://github.com/meshplay/meshplay-operator/actions/workflows/build-and-release.yml/badge.svg)](https://github.com/meshplay/meshplay-operator/actions)
 [![GitHub](https://img.shields.io/github/license/khulnasoft/meshplay-operator.svg)](LICENSE)
-[![codecov](https://codecov.io/gh/khulnasoft/meshplay-operator/branch/master/graph/badge.svg?token=TJZ2L4JHSA)](https://codecov.io/gh/khulnasoft/meshplay-operator)
+[![codecov](https://codecov.io/gh/meshplay/meshplay-operator/branch/master/graph/badge.svg?token=TJZ2L4JHSA)](https://codecov.io/gh/meshplay/meshplay-operator)
 [![Website](https://img.shields.io/website/https/khulnasoft.com/meshplay.svg)](https://khulnasoft.com/meshplay/)
 [![Twitter Follow](https://img.shields.io/twitter/follow/khulnasoft.svg?label=Follow&style=social)](https://twitter.com/intent/follow?screen_name=meshplayio)
 [![Discuss Users](https://img.shields.io/discourse/users?server=https%3A%2F%2Fdiscuss.khulnasoft.com)](https://discuss.khulnasoft.com)
@@ -25,7 +25,7 @@ A self-service engineering platform, <a href="https://meshplay.io">Meshplay</a>,
 </p>
 <br />
 
-<a href="https://meshplay.io/community"><img alt="Khulnasoft Service Mesh Community" src="./img/readme/meshplay-operator-dark.svg" style="margin:10px;" width="165px" align="left" /></a>
+<a href="https://meshplay.io/community"><img alt="KhulnaSoft Service Mesh Community" src="./img/readme/meshplay-operator-dark.svg" style="margin:10px;" width="165px" align="left" /></a>
 # Meshplay Operator
 Meshplay Operator is the multi-service mesh operator and implementation of MeshSync.
 <div>&nbsp;</div>
@@ -34,7 +34,7 @@ Meshplay Operator is the multi-service mesh operator and implementation of MeshS
 <br />
 <br />
 
-<a href="https://github.com/khulnasoft/meshsync"><img align="left" src="https://raw.githubusercontent.com/khulnasoft/meshsync/master/.github/readme/images/meshsync.svg"  width="165px" /></a>
+<a href="https://github.com/meshplay/meshsync"><img align="left" src="https://raw.githubusercontent.com/khulnasoft/meshsync/master/.github/readme/images/meshsync.svg"  width="165px" /></a>
 # MeshSync
 MeshSync (Service Mesh Synchronization), an event-driven, continuous synchronization routine performs the task of ensuring that the state of configuration and status of operation of any service mesh and of the Kubernetes environment are known to Meshplay. MeshSync runs as a Kubernetes custom controller under the control of Meshplay Operator.
 <br />
@@ -62,15 +62,15 @@ Our projects are community-built and welcome collaboration. 👍 Be sure to see 
 <a href ="https://khulnasoft.com/community"><img alt="MeshMates" src=".github/assets/images/readme/khulnasoft-community-sign.png" style="margin-right:36px; margin-bottom:7px;" width="140px" align="left" /></a>
 <h3>Find your MeshMate</h3>
 
-<p>MeshMates are experienced Khulnasoft community members, who will help you learn your way around, discover live projects, and expand your community network. Conneect with a Meshmate today!</p>
+<p>MeshMates are experienced KhulnaSoft community members, who will help you learn your way around, discover live projects, and expand your community network. Conneect with a Meshmate today!</p>
 
-Find out more on the <a href="https://khulnasoft.com/community#meshmate">Khulnasoft community</a>. <br />
+Find out more on the <a href="https://khulnasoft.com/community#meshmate">KhulnaSoft community</a>. <br />
 
 </p>
 <br /><br />
 <div style="display: flex; justify-content: center; align-items:center;">
 <div>
-<a href="https://meshplay.io/community"><img alt="Khulnasoft Cloud Native Community" src="https://docs.meshplay.io/assets/img/readme/community.png" width="140px" style="margin-right:36px; margin-bottom:7px;" width="140px" align="left"/></a>
+<a href="https://meshplay.io/community"><img alt="KhulnaSoft Cloud Native Community" src="https://docs.meshplay.io/assets/img/readme/community.png" width="140px" style="margin-right:36px; margin-bottom:7px;" width="140px" align="left"/></a>
 </div>
 <div style="width:60%; padding-left: 16px; padding-right: 16px">
 <p>
@@ -85,9 +85,9 @@ Find out more on the <a href="https://khulnasoft.com/community#meshmate">Khulnas
 <div>
 <a href="http://slack.khulnasoft.com">
 <picture style="text-align:left;" align="left">
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/khulnasoft/meshplay/master/.github/assets/images/readme/slack.svg"  width="110px" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/khulnasoft/meshplay/master/.github/assets/images/readme/slack.svg" width="110px" />
-  <img alt="Shows an illustrated light mode meshplay logo in light color mode and a dark mode meshplay logo dark color mode." src="https://raw.githubusercontent.com/khulnasoft/meshplay/master/.github/assets/images/readme/slack.svg" width="110px" align="left" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/meshplay/meshplay/master/.github/assets/images/readme/slack.svg"  width="110px" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/meshplay/meshplay/master/.github/assets/images/readme/slack.svg" width="110px" />
+  <img alt="Shows an illustrated light mode meshplay logo in light color mode and a dark mode meshplay logo dark color mode." src="https://raw.githubusercontent.com/meshplay/meshplay/master/.github/assets/images/readme/slack.svg" width="110px" align="left" />
 </picture>
 </a>
   <br /><br />

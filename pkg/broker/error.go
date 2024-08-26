@@ -1,5 +1,5 @@
 /*
-Copyright 2023 Khulnasoft, Inc.
+Copyright 2023 KhulnaSoft, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -28,17 +28,17 @@ const (
 )
 
 func ErrGettingResource(err error) error {
-	return errors.New(ErrGettingResourceCode + ":" + "Unable to get resource")
+	return errors.New(ErrGettingResourceCode + ":" + "Unable to get resource" + err.Error())
 }
 
 func ErrGettingEndpoint(err error) error {
-	return errors.New(ErrGettingEndpointCode + ":" + "Unable to get endpoint")
+	return errors.New(ErrGettingEndpointCode + ":" + "Unable to get endpoint" + err.Error())
 }
 
 func ErrReplicasNotReady(reason string) error {
-	return errors.New(ErrReplicasNotReadyCode + ":" + "The replicas are not ready")
+	return errors.New(ErrReplicasNotReadyCode + ":" + "The replicas are not ready" + reason)
 }
 
 func ErrConditionFalse(reason string) error {
-	return errors.New(ErrConditionFalseCode + ":" + "The condition is false")
+	return errors.New(ErrConditionFalseCode + ":" + "The condition is false" + reason)
 }
