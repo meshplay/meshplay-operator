@@ -1,5 +1,5 @@
 /*
-Copyright 2020 Khulnasoft, Inc.
+Copyright 2020 KhulnaSoft, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -27,6 +27,7 @@ import (
 	clientgoscheme "k8s.io/client-go/kubernetes/scheme"
 	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp"
 	ctrl "sigs.k8s.io/controller-runtime"
+	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
 	meshplayv1alpha1 "github.com/khulnasoft/meshplay-operator/api/v1alpha1"
 	"github.com/khulnasoft/meshplay-operator/controllers"
@@ -55,6 +56,7 @@ func main() {
 		"Enable leader election for controller manager. "+
 			"Enabling this will ensure there is only one active controller manager.")
 	flag.Parse()
+	ctrl.SetLogger(zap.New(zap.UseFlagOptions(&zap.Options{})))
 
 	opID := uuid.NewUUID()
 	mgr, err := ctrl.NewManager(ctrl.GetConfigOrDie(), ctrl.Options{

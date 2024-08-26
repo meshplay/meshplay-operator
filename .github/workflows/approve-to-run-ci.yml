@@ -46,7 +46,7 @@ jobs:
         # golandci-lint need to be run before codecov and succeed
         needs: [golangci-lint, tidy]
         name: Code Coverage
-        if: github.repository == 'khulnasoft/meshplay-operator'
+        if: github.repository == 'meshplay/meshplay-operator'
         runs-on: ubuntu-22.04
         steps:
           - name: Checkout code
@@ -62,7 +62,7 @@ jobs:
           - name: Run unit tests
             run: make test
           - name: Upload coverage to Codecov
-            if: github.repository == 'khulnasoft/meshplay-operator'
+            if: github.repository == 'meshplay/meshplay-operator'
             uses: codecov/codecov-action@v3
             with:
               files: ./coverage.txt

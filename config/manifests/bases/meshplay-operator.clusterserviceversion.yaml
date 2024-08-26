@@ -46,5 +46,5 @@ spec:
   maturity: alpha
   provider:
     name: meshplay
-    url: https://github.com/khulnasoft
+    url: https://github.com/meshplay
   version: 0.0.0

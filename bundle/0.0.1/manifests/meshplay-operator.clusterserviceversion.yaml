@@ -53,7 +53,7 @@ metadata:
     categories: Monitoring
     containerImage: khulnasoft/meshplay-operator:stable-latest
     createdAt: "2022-05-12T19:42:22Z"
-    support: khulnasoft.com
+    support: KhulnaSoft.com
     description: |-
       Meshplay is the cloud native management plane offering lifecycle, configuration, and performance management of Kubernetes, service meshes, and your workloads.
     operators.operatorframework.io/builder: operator-sdk-v1.14.0+git
@@ -592,5 +592,5 @@ FnZVJlYWR5ccllPAAAAABJRU5ErkJggg=="
   maturity: alpha
   provider:
     name: meshplay
-    url: https://github.com/khulnasoft
+    url: https://github.com/meshplay
   version: 0.0.1

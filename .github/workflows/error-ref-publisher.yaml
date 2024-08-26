@@ -1,6 +1,5 @@
 name: Meshkit Error Codes Utility Runner
 on:
-  workflow_dispatch:
   push:
     branches:
       - 'master'
@@ -10,7 +9,7 @@ on:
 jobs:
   Update-error-codes:
     name: Error codes utility
-    if: github.repository == 'khulnasoft/meshplay-operator'
+    if: github.repository == 'meshplay/meshplay-operator'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -32,7 +31,7 @@ jobs:
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_user_name: l5io
+          commit_user_name: khulnasoft
           commit_user_email: ci@khulnasoft.com
           commit_author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           commit_options: '--signoff'
@@ -43,7 +42,7 @@ jobs:
       - name: Checkout meshplay
         uses: actions/checkout@master
         with:
-          repository: 'khulnasoft/meshplay'
+          repository: 'meshplay/meshplay'
           # token with write access to meshplay repository
           token: ${{ secrets.GH_ACCESS_TOKEN }}
           path: 'meshplay'
@@ -53,7 +52,7 @@ jobs:
         run: |
           echo '{ "errors_export": "" }' | jq --slurpfile export ./helpers/errorutil_errors_export.json '.errors_export = $export[0]' > ./meshplay/docs/_data/errorref/meshplay-operator_errors_export.json
           cd ./meshplay
-          git config user.name l5io
+          git config user.name khulnasoft
           git config user.email ci@khulnasoft.com
           if git diff --exit-code --quiet
           then

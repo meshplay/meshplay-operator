@@ -1,5 +1,5 @@
 /*
-Copyright 2020 Khulnasoft, Inc.
+Copyright 2020 KhulnaSoft, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -20,6 +20,7 @@ import (
 	"context"
 
 	"github.com/go-logr/logr"
+	appsv1 "k8s.io/api/apps/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/client-go/kubernetes"
@@ -30,6 +31,7 @@ import (
 
 	meshplayv1alpha1 "github.com/khulnasoft/meshplay-operator/api/v1alpha1"
 	brokerpackage "github.com/khulnasoft/meshplay-operator/pkg/broker"
+	"github.com/khulnasoft/meshplay-operator/pkg/meshsync"
 	meshsyncpackage "github.com/khulnasoft/meshplay-operator/pkg/meshsync"
 	"github.com/khulnasoft/meshplay-operator/pkg/utils"
 	kubeerror "k8s.io/apimachinery/pkg/api/errors"
@@ -68,24 +70,36 @@ func (r *MeshSyncReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 	// Get broker configuration
 	err = r.reconcileBrokerConfig(ctx, baseResource)
 	if err != nil {
+		r.Log.Error(err, "meshsync reconcilation failed")
 		return ctrl.Result{}, ErrReconcileMeshsync(err)
 	}
 
 	// Check if Meshsync controller running
 	result, err := r.reconcileMeshsync(ctx, true, baseResource, req)
 	if err != nil {
+		err = ErrReconcileMeshsync(err)
+		r.Log.Error(err, "meshsync reconcilation failed")
 		return ctrl.Result{}, ErrReconcileMeshsync(err)
+	}
+
+	err = meshsync.CheckHealth(ctx, baseResource, r.Clientset)
+	if err != nil {
+		return ctrl.Result{Requeue: true}, ErrCheckHealth(err)
 	}
 
 	// Patch the meshsync resource
 	patch, err := utils.Marshal(baseResource)
 	if err != nil {
-		return ctrl.Result{}, ErrUpdateResource(err)
+		err = ErrUpdateResource(err)
+		r.Log.Error(err, "unable to update meshsync resource")
+		return ctrl.Result{}, err
 	}
 
 	err = r.Status().Patch(ctx, baseResource, client.RawPatch(types.MergePatchType, []byte(patch)))
 	if err != nil {
-		return ctrl.Result{}, ErrUpdateResource(err)
+		err = ErrUpdateResource(err)
+		r.Log.Error(err, "unable to update meshsync resource")
+		return ctrl.Result{}, err
 	}
 
 	return result, nil
@@ -94,6 +108,7 @@ func (r *MeshSyncReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 func (r *MeshSyncReconciler) SetupWithManager(mgr ctrl.Manager) error {
 	return ctrl.NewControllerManagedBy(mgr).
 		For(&meshplayv1alpha1.MeshSync{}).
+		Owns(&appsv1.Deployment{}).
 		Complete(r)
 }
 
