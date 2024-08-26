@@ -1,6 +1,5 @@
 name: Meshplay-Operator Build and Releaser
 on:
-  workflow_dispatch:
   push:
     branches:
       - 'master'
