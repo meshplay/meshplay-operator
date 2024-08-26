@@ -31,8 +31,8 @@ jobs:
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_user_name: khulnasoft
-          commit_user_email: ci@khulnasoft.com
+          commit_user_name: khulnasoft-bot
+          commit_user_email: info@khulnasoft.com
           commit_author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           commit_options: '--signoff'
           commit_message: 'run error codes utility'
